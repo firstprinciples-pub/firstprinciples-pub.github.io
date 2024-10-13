@@ -12,11 +12,11 @@ const BlogPostPage: React.FC = () => {
 	return (
 		<>
 			<Header />
-			<article>
+			<main className="blog-post">
 				<h1>{post.title}</h1>
-				<p>{post.date}</p>
-				<div>{post.content}</div>
-			</article>
+				<p className="date">{post.date}</p>
+				<div className="content">{post.content}</div>
+			</main>
 		</>
 	);
 };
