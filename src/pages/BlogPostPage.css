@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -49,7 +50,9 @@ main.blog-post {
 	line-height: 1.75;
 }
 
-.blog-post p {
+.blog-post p,
+.blog-post ol,
+.blog-post ul {
 	margin-bottom: 20px;
 }
 
@@ -61,4 +64,67 @@ main.blog-post {
 
 .blog-post .content a:hover {
 	border-bottom: 1px solid transparent;
+}
+
+.blog-post pre {
+	font-size: 14px !important;
+	border-radius: 0.5rem !important;
+	padding: 0 1em !important;
+	line-height: 1.6 !important;
+}
+
+.blog-post img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.blog-post ol,
+.blog-post ul {
+	padding-inline-start: 0;
+	margin-left: 3em;
+}
+
+.blog-post li {
+	text-wrap: pretty;
+	margin-bottom: 10px;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	cursor: pointer;
+}
+
+.modal-content {
+	position: relative;
+	max-width: 90%;
+	max-height: 90%;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.modal-content img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.clickable-img {
+	cursor: pointer;
+	display: block;
+	margin: 10px auto;
+	max-width: 100%;
+	height: auto;
+	border-radius: 4px;
+	transition: transform 0.2s ease;
 }
