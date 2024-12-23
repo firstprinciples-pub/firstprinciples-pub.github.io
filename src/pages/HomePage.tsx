@@ -7,9 +7,11 @@ const HomePage: React.FC = () => (
 	<>
 		<Header />
 		<main>
-			{blogPosts.map((post) => (
-				<BlogPostPreview key={post.id} post={post} />
-			))}
+			{blogPosts
+				.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+				.map((post) => (
+					<BlogPostPreview key={post.id} post={post} />
+				))}
 		</main>
 	</>
 );
