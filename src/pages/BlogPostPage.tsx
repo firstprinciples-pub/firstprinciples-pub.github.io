@@ -64,7 +64,7 @@ const BlogPostPage: React.FC = () => {
 
 	return (
 		<>
-			<Header />
+			<Header minimized />
 			<MathJaxContext>
 				<main className="blog-post">
 					<h1>{post.title}</h1>

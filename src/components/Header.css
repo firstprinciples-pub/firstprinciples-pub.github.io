@@ -1,0 +1,24 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header.minimized {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 50px;
+	padding: 10px;
+	justify-content: flex-start;
+}
+
+.header-title {
+	font-size: 3em;
+	margin: 0;
+}
+
+.header.minimized .header-title {
+	font-size: 1em;
+}
