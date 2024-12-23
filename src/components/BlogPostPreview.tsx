@@ -10,6 +10,9 @@ const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => (
 	<article>
 		<h2>{post.title}</h2>
 		<p>{post.date}</p>
+		<p>
+			<i>{post.authors.join(", ")}</i>
+		</p>
 		<Link to={`/post/${post.id}`}>Read more</Link>
 	</article>
 );

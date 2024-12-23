@@ -44,6 +44,13 @@ main.blog-post {
 	margin-bottom: 30px;
 }
 
+.blog-post .author {
+	text-align: center;
+	font-size: 0.9em;
+	color: #666;
+	margin-bottom: 30px;
+}
+
 .blog-post .content {
 	font-size: 1.1em;
 	color: #333;

@@ -6,6 +6,7 @@ export interface BlogPost {
 	id: string;
 	title: string;
 	date: string;
+	authors: string[];
 	content: Array<{ type: string; [key: string]: any }>;
 }
 
@@ -14,12 +15,14 @@ export const blogPosts: BlogPost[] = [
 		id: "coming-soon",
 		title: "Coming soon",
 		date: "October 12, 2024",
+		authors: ["Tanush Chopra", "Michael Li"],
 		content: [{ type: "html", value: "Coming soon, to a Denny's near you!" }],
 	},
 	{
 		id: "discord-clustering",
 		title: "Visualizing Six Years of Discord Chats",
 		date: "December 23, 2024",
+		authors: ["Michael Li"],
 		content: [
 			{
 				type: "html",

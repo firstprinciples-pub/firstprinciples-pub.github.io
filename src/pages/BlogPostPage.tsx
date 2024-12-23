@@ -69,6 +69,7 @@ const BlogPostPage: React.FC = () => {
 				<main className="blog-post">
 					<h1>{post.title}</h1>
 					<p className="date">{post.date}</p>
+					<p className="author">By {post.authors.join(", ")}</p>
 					<div className="content">{renderContent(post.content)}</div>
 					{modalImage && (
 						<div className="modal-overlay" onClick={closeModal}>
