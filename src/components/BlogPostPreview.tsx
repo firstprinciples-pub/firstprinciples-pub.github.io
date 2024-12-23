@@ -8,14 +8,15 @@ interface BlogPostPreviewProps {
 }
 
 const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => (
-	<article className="blog-post-preview">
-		<h2>{post.title}</h2>
-		<p>{post.date}</p>
-		<p>
-			<i>{post.authors.join(", ")}</i>
-		</p>
-		<Link to={`/post/${post.id}`}>Read more</Link>
-	</article>
+	<Link to={`/post/${post.id}`} className="blog-post-preview-link">
+		<article className="blog-post-preview">
+			<h2>{post.title}</h2>
+			<p>{post.date}</p>
+			<p>
+				<i>{post.authors.join(", ")}</i>
+			</p>
+		</article>
+	</Link>
 );
 
 export default BlogPostPreview;
