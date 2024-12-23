@@ -156,7 +156,7 @@ def cluster_documents_gmm(tfidf_matrix, n_components=100, max_iter=100, tol=1e-4
 			},
 			{
 				type: "html",
-				value: `<h2>Conclusion</h2><p>This project was a great way to revisit years of conversations with a friend and explore clustering techniques. While the results aren’t perfect, they reveal clear patterns in our topics. All the code is available on <a href="https://github.com/ml5885/discord-chat-visualizer" target="_blank">GitHub</a>. There’s still room for improvement, but this was a fun start.</p>`,
+				value: `<h2>Conclusion</h2><p>This project was a great way to revisit years of conversations with a friend and explore clustering techniques. While the results aren’t perfect, they reveal clear patterns in our topics. All the code is available on <a href="https://github.com/ml5885/discord-wrapped" target="_blank">GitHub</a>. There’s still room for improvement, but this was a fun start.</p>`,
 			},
 		],
 	},

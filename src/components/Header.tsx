@@ -20,6 +20,11 @@ const Header: React.FC<HeaderProps> = ({ minimized = false }) => (
 				First Principles
 			</Link>
 		</h1>
+		{/* {minimized ? null : (
+			<p>
+				<i>Write down the problem. Think very hard. Write down the solution.</i>
+			</p>
+		)} */}
 	</header>
 );
 
