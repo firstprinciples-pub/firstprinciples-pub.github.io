@@ -1,7 +1,7 @@
 {
 	"name": "first-principles",
 	"version": "0.1.0",
-	"homepage": "https://firstprinciples-pub.github.io",
+	"homepage": "https://firstprinciples.pub",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.17.0",
