@@ -1,6 +1,9 @@
 import image1 from "../images/file-6mBkAAnqEkE2hkR138PkiD.png";
 import image2 from "../images/file-AJdFHbqZmAqYmfwsdy3wua.png";
 import image3 from "../images/file-PFs5uw2yFWGHyuZLh26yda.png";
+import image4 from "../images/discord-research-cluster.png";
+import image5 from "../images/discord-bet-cluster.png";
+import image6 from "../images/discord-join-cluster.png";
 
 export interface BlogPost {
 	id: string;
@@ -55,7 +58,7 @@ def generate_bert_embeddings(df):
             pickle.dump(embeddings, f)
         print("BERT embeddings cached.")
     return np.asarray(embeddings)
-				`,
+        `,
 			},
 			{
 				type: "html",
@@ -143,7 +146,7 @@ def cluster_documents_gmm(tfidf_matrix, n_components=100, max_iter=100, tol=1e-4
 
     labels = np.argmax(responsibilities, axis=1)
     return labels
-				`,
+        `,
 			},
 			{
 				type: "html",
@@ -153,6 +156,76 @@ def cluster_documents_gmm(tfidf_matrix, n_components=100, max_iter=100, tol=1e-4
 				type: "image",
 				src: image3,
 				alt: "Final Visualization with GMM",
+			},
+			{
+				type: "html",
+				value: `<h2>Rendering Thousands of Points</h2>
+      <p>To show all the messages at once, I needed a frontend that wouldn’t slow down with tens of thousands of points. I used an HTML canvas and a bit of D3 for zooming and panning. Canvas is more efficient than creating individual SVG elements, so it runs smoothly even at this scale. I also created a color palette, then used interpolation to expand it to more clusters. After that, I wrote a small seeded random function to shuffle the color list, so clusters that are similar don’t get placed next to each other. I also added a highlight feature: clicking on a point dims all the other clusters, making it easier to focus on that one cluster alone. Finally, I added hover tooltips to show each message’s text, author, and timestamp. This setup made it simple to explore the entire history without lag.</p>
+
+      <p>Here’s a small snippet from <code>script.js</code> that shows how I set up the canvas and draw each point. I’m redrawing everything on every zoom or pan event, which might sound expensive, but in practice it performs well. Because I'm using canvas, drawing tens of thousands of points remains responsive.</p>
+      `,
+			},
+			{
+				type: "code",
+				language: "javascript",
+				value: `      
+const width = window.innerWidth;
+const height = 800;
+const pixelRatio = window.devicePixelRatio || 1;
+
+const canvas = document.getElementById("chart");
+canvas.width = width * pixelRatio;
+canvas.height = height * pixelRatio;
+canvas.style.width = width + "px";
+canvas.style.height = height + "px";
+
+const context = canvas.getContext("2d");
+context.scale(pixelRatio, pixelRatio);
+
+function drawPoints(data, transform) {
+    context.save();
+    context.clearRect(0, 0, width, height);
+    context.translate(transform.x, transform.y);
+    context.scale(transform.k, transform.k);
+
+    data.forEach(d => {
+        context.beginPath();
+        context.arc(xScale(d.x), yScale(d.y), 3 / transform.k, 0, 2 * Math.PI);
+        context.fillStyle = getColorForCluster(d.cluster_label);
+        context.fill();
+    });
+
+    context.restore();
+}
+
+// Called inside a zoom handler:
+d3.select(canvas).call(d3.zoom().on("zoom", event => {
+    drawPoints(myData, event.transform);
+}));
+    `,
+			},
+			{
+				type: "html",
+				value: `<p>In this example, <code>xScale</code> and <code>yScale</code> are standard D3 linear scales, and <code>getColorForCluster</code> returns a color based on cluster label. I also have a tooltip system that listens for mouse events on the canvas to figure out which point I’m hovering over. This way, I can click to highlight a cluster, zoom in to examine smaller groups, and explore all the messages with ease.</p>`,
+			},
+			{
+				type: "html",
+				value: `<h2>Cluster Highlights</h2><p>With the canvas working, I had a lot of fun going through all the clusters. Some were straightforward, like the “Research” which contained all our messages about research. Some other clusters that caught my eye were “Bet,” which I guess was a message we sent so frequently that it formed it's own cluster, and “Join”, which just contained messages from my friend telling me to join our weekly calls over and over.</p>`,
+			},
+			{
+				type: "image",
+				src: image4,
+				alt: "Research cluster in focus",
+			},
+			{
+				type: "image",
+				src: image5,
+				alt: "Bet cluster in focus",
+			},
+			{
+				type: "image",
+				src: image6,
+				alt: "Join cluster in focus",
 			},
 			{
 				type: "html",
