@@ -20,6 +20,14 @@
 	margin: 0;
 }
 
+.header-title a {
+	cursor: default;
+}
+
 .header.minimized .header-title {
 	font-size: 1em;
+}
+
+.header.minimized .header-title a {
+	cursor: pointer;
 }
