@@ -1,16 +1,8 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-}
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 
-body {
-	font-family: "Georgia", serif;
-	color: #000;
-	line-height: 1.75;
-	padding: 20px;
-	background-color: #fff;
+h1,
+h2 {
+	font-family: "EB Garamond", serif;
 }
 
 header {
@@ -30,36 +22,40 @@ main.blog-post {
 }
 
 .blog-post h1 {
-	font-size: 2.5em;
+	font-size: 3em;
 	font-weight: 400;
 	text-align: center;
 	margin-bottom: 10px;
-	line-height: 1.2;
 }
 
-.blog-post .date {
-	text-align: center;
-	font-size: 0.9em;
-	color: #666;
-	margin-bottom: 30px;
+.blog-post h2 {
+	font-weight: 500;
+	margin: 0;
+	margin-top: 30px;
 }
 
+.blog-post .date,
 .blog-post .author {
 	text-align: center;
 	font-size: 0.9em;
 	color: #666;
-	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .blog-post .content {
-	font-size: 1.1em;
-	color: #333;
-	line-height: 1.75;
+	font-size: 1em;
+	color: rgb(28, 28, 28);
+	line-height: 1.6em;
+	text-align: justify;
+	white-space: normal !important;
+	white-space: pre-wrap;
 }
 
 .blog-post p,
 .blog-post ol,
 .blog-post ul {
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
@@ -134,4 +130,38 @@ main.blog-post {
 	height: auto;
 	border-radius: 4px;
 	transition: transform 0.2s ease;
+}
+
+article {
+	margin-bottom: 40px;
+}
+
+article h2 {
+	font-size: 1.5em;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+article p {
+	font-size: 1em;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+article a {
+	font-size: 1em;
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 1px solid #000;
+}
+
+article a:hover {
+	border-bottom: 1px solid transparent;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	font-size: 0.9em;
+	color: #555;
 }

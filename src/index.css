@@ -2,23 +2,14 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
-	font-family: "Georgia", serif;
+	font-family: "Apercu", sans-serif;
 	color: #000;
-	line-height: 1.75;
 	padding: 20px;
-}
-
-header {
-	padding: 40px 0;
-	text-align: center;
-}
-
-header h1 {
-	font-size: 2em;
-	font-weight: 400;
+	background-color: #fff;
 }
 
 main {
@@ -26,36 +17,65 @@ main {
 	margin: 0 auto;
 }
 
-article {
-	margin-bottom: 40px;
-}
-
-article h2 {
-	font-size: 1.5em;
+@font-face {
+	font-family: "Apercu";
+	src: url("./fonts/Apercu Pro Regular.otf") format("opentype");
 	font-weight: 400;
-	margin-bottom: 10px;
+	font-style: normal;
 }
 
-article p {
-	font-size: 1em;
-	color: #333;
-	margin-bottom: 10px;
+@font-face {
+	font-family: "Apercu";
+	src: url("./fonts/Apercu Pro Bold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
 }
 
-article a {
-	font-size: 1em;
-	color: inherit;
-	text-decoration: none;
-	border-bottom: 1px solid #000;
+@font-face {
+	font-family: "Apercu";
+	src: url("./fonts/Apercu Pro Light.otf") format("opentype");
+	font-weight: 300;
+	font-style: normal;
 }
 
-article a:hover {
-	border-bottom: 1px solid transparent;
+@font-face {
+	font-family: "Apercu";
+	src: url("./fonts/Apercu Pro Medium.otf") format("opentype");
+	font-weight: 500;
+	font-style: normal;
 }
 
-footer {
-	text-align: center;
-	padding: 20px;
-	font-size: 0.9em;
-	color: #555;
+@font-face {
+	font-family: "Apercu";
+	src: url("./fonts/Apercu Pro Italic.otf") format("opentype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Apercu";
+	src: url("./fonts/Apercu Pro Bold Italic.otf") format("opentype");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Apercu";
+	src: url("./fonts/Apercu Pro Light Italic.otf") format("opentype");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Apercu";
+	src: url("./fonts/Apercu Pro Medium Italic.otf") format("opentype");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Apercu Mono";
+	src: url("./fonts/Apercu Pro Mono.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
 }
