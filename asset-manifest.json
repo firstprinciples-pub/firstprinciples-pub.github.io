@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a9d3e88.css",
-    "main.js": "/static/js/main.bf7a3853.js",
+    "main.css": "/static/css/main.203630a3.css",
+    "main.js": "/static/js/main.f1b1ddad.js",
     "static/js/453.5b5e5c2b.chunk.js": "/static/js/453.5b5e5c2b.chunk.js",
     "static/media/file-PFs5uw2yFWGHyuZLh26yda.png": "/static/media/file-PFs5uw2yFWGHyuZLh26yda.f29713e209e657873591.png",
     "static/media/file-AJdFHbqZmAqYmfwsdy3wua.png": "/static/media/file-AJdFHbqZmAqYmfwsdy3wua.96a6a8b07b6babad9a48.png",
@@ -19,12 +19,12 @@
     "static/media/discord-bet-cluster.png": "/static/media/discord-bet-cluster.4a46da1882e11a788ba0.png",
     "static/media/Apercu Pro Mono.otf": "/static/media/Apercu Pro Mono.e22a5c4a23de823c02c9.otf",
     "index.html": "/index.html",
-    "main.1a9d3e88.css.map": "/static/css/main.1a9d3e88.css.map",
-    "main.bf7a3853.js.map": "/static/js/main.bf7a3853.js.map",
+    "main.203630a3.css.map": "/static/css/main.203630a3.css.map",
+    "main.f1b1ddad.js.map": "/static/js/main.f1b1ddad.js.map",
     "453.5b5e5c2b.chunk.js.map": "/static/js/453.5b5e5c2b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a9d3e88.css",
-    "static/js/main.bf7a3853.js"
+    "static/css/main.203630a3.css",
+    "static/js/main.f1b1ddad.js"
   ]
 }
