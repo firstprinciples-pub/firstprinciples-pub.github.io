@@ -165,3 +165,14 @@ footer {
 	font-size: 0.9em;
 	color: #555;
 }
+
+.timestamp {
+	font-size: 0.8em;
+	color: #999;
+	opacity: 0.7;
+	font-weight: normal;
+}
+
+.message {
+	margin-bottom: 15px;
+}
