@@ -358,6 +358,26 @@ d3.select(canvas).call(d3.zoom().on("zoom", event => {
 			},
 			{
 				type: "html",
+				value: `<div class="message"><strong>Michael</strong> <span class="timestamp">— 5/25/25, 12:48 PM</span><br>What they (linguists) thought back in 2020<br><a href="https://aclanthology.org/2020.acl-main.463.pdf" target="_blank">https://aclanthology.org/2020.acl-main.463.pdf</a></div>`,
+			},
+			{
+				type: "html",
+				value: `<div class="message"><strong>Michael</strong> <span class="timestamp">— 5/25/25, 12:49 PM</span><br>From Emily bender</div>`,
+			},
+			{
+				type: "html",
+				value: `<div class="message"><strong>Tanush</strong> <span class="timestamp">— 5/25/25, 12:49 PM</span><br>It's a weird debate because they aren't talking about the same thing really<br>One is a debate over the likelihood of the premise<br>And the other is a debate over what happens if the premise is true</div>`,
+			},
+			{
+				type: "html",
+				value: `<div class="message"><strong>Tanush</strong> <span class="timestamp">— 5/25/25, 12:50 PM</span><br>In debate those should be 2 separate debates</div>`,
+			},
+			{
+				type: "html",
+				value: `<div class="message"><strong>Michael</strong> <span class="timestamp">— 5/25/25, 12:50 PM</span><br>Yeah but they have some bearing on each other, like epistemically why care about the second debate if the first debate is happening<br>It's very confusing I ageee<br>They basically talk past each other</div>`,
+			},
+			{
+				type: "html",
 				value: `</div>`,
 			},
 		],
