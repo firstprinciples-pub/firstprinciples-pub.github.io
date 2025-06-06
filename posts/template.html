@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>[Blog Post Title] - First Principles</title>
+        <link rel="stylesheet" href="../post.css">
+
+        <!-- Optional: Include MathJax if you need mathematical expressions -->
+        <!-- 
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                }
+            };
+        </script>
+        -->
+
+        <!-- Optional: Include Prism.js for code syntax highlighting -->
+        <!-- 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        -->
+    </head>
+    <body>
+        <header class="header minimized">
+            <h1 class="header-title">
+                <a href="../index.html">First Principles</a>
+            </h1>
+        </header>
+
+        <main class="blog-post">
+            <h1>[Blog Post Title]</h1>
+            <div class="date">[Date - e.g., January 1, 2025]</div>
+            <div class="author"><i>[Author Name(s)]</i></div>
+
+            <div class="content">
+                <p>This is a template for creating new blog posts. Replace this
+                    content with your actual blog post content.</p>
+
+                <h2>Section Header</h2>
+                <p>Your content goes here. You can use various HTML
+                    elements:</p>
+
+                <ul>
+                    <li>Unordered lists</li>
+                    <li>With multiple items</li>
+                </ul>
+
+                <ol>
+                    <li>Ordered lists</li>
+                    <li>Are also supported</li>
+                </ol>
+
+                <p>You can include <a href="#" target="_blank">links</a> and
+                    <code>inline code</code>.</p>
+
+                <pre><code class="language-python">
+# For code blocks, use pre and code tags
+def example_function():
+    """This is an example code block."""
+    return "Hello, World!"
+                </code></pre>
+
+                <p>Images can be included like this:</p>
+                <img src="../images/example-image.png"
+                    alt="Example image description" class="clickable-img">
+
+                <h2>Mathematical Expressions (if MathJax is enabled)</h2>
+                <p>Inline math: $E = mc^2$</p>
+                <p>Display math:</p>
+                $$\sum_{i=1}^n x_i = x_1 + x_2 + \cdots + x_n$$
+
+                <h2>Conversation Format (for dialogue posts)</h2>
+                <div class="conversation">
+                    <div class="message">
+                        <strong>Person 1</strong>
+                        <span class="timestamp">— Date, Time</span><br>
+                        This is how you format conversations or dialogues.
+                    </div>
+
+                    <div class="message">
+                        <strong>Person 2</strong>
+                        <span class="timestamp">— Date, Time</span><br>
+                        Each message gets its own div with the message class.
+                    </div>
+                </div>
+
+                <h2>Conclusion</h2>
+                <p>Replace all the placeholder content with your actual blog
+                    post content. Don't forget to:</p>
+                <ul>
+                    <li>Update the title in the &lt;title&gt; tag and
+                        &lt;h1&gt;</li>
+                    <li>Set the correct date and author</li>
+                    <li>Add any required script includes (MathJax,
+                        Prism.js)</li>
+                    <li>Include the image modal script if you have clickable
+                        images</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- Optional: Include image modal script if you have clickable images -->
+        <!-- <script src="../image-modal.js"></script> -->
+    </body>
+</html>
