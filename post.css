@@ -1,154 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
-
-/* Font Face Declarations */
-@font-face {
-	font-family: "Apercu";
-	src: url("./fonts/Apercu Pro Regular.otf") format("opentype");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Apercu";
-	src: url("./fonts/Apercu Pro Bold.otf") format("opentype");
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Apercu";
-	src: url("./fonts/Apercu Pro Light.otf") format("opentype");
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Apercu";
-	src: url("./fonts/Apercu Pro Medium.otf") format("opentype");
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Apercu";
-	src: url("./fonts/Apercu Pro Italic.otf") format("opentype");
-	font-weight: 400;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Apercu";
-	src: url("./fonts/Apercu Pro Bold Italic.otf") format("opentype");
-	font-weight: 700;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Apercu";
-	src: url("./fonts/Apercu Pro Light Italic.otf") format("opentype");
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Apercu";
-	src: url("./fonts/Apercu Pro Medium Italic.otf") format("opentype");
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Apercu Mono";
-	src: url("./fonts/Apercu Pro Mono.otf") format("opentype");
-	font-weight: 400;
-	font-style: normal;
-}
-
-/* Reset & Base Styles */
-* {
-	-webkit-font-smoothing: antialiased;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background-color: #fff;
-	color: #000;
-	font-family: "Apercu", sans-serif;
-	padding: 20px;
-}
-
-h1,
-h2 {
-	font-family: "EB Garamond", serif;
-}
-
-/* Header Styles */
-.header {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.header.minimized {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 200px;
-	height: 50px;
-	padding: 20px;
-	justify-content: flex-start;
-}
-
-.header-title {
-	font-size: 3em;
-	margin: 0;
-}
-
-.header-title a {
-	cursor: default;
-	color: black;
-	text-decoration: none;
-}
-
-.header.minimized .header-title a {
-	cursor: pointer;
-	font-size: 20px;
-}
-
-.header.minimized .header-title a:hover {
-	color: grey;
-}
-
-.header.minimized .header-title a:hover::after {
-	content: "go back";
-	display: flex;
-	font-size: 14px;
-	color: grey;
-}
-
-header {
-	padding: 40px 0;
-	text-align: center;
-}
-
-header h1 {
-	font-size: 2em;
-	font-weight: 400;
+main {
+	width: auto;
 }
 
 main.blog-post {
-	max-width: 700px;
-	margin: 0 auto;
-	padding: 60px 0;
+	padding: 40px 0;
 }
 
 .blog-post h1 {
 	font-size: 3em;
 	font-weight: 400;
-	text-align: center;
+	text-align: left;
 	margin-bottom: 10px;
 }
 
@@ -160,18 +21,21 @@ main.blog-post {
 
 .blog-post .date,
 .blog-post .author {
-	text-align: center;
 	font-size: 0.9em;
 	color: #666;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	width: 55%;
+}
+
+.blog-post .author {
+	margin-bottom: 30px;
 }
 
 .blog-post .content {
 	font-size: 1em;
 	color: rgb(28, 28, 28);
 	line-height: 1.6em;
-	text-align: justify;
 	white-space: normal !important;
 	white-space: pre-wrap;
 }
@@ -183,11 +47,17 @@ main.blog-post {
 	font-size: 1.5em;
 }
 
-.blog-post p,
-.blog-post ol,
-.blog-post ul {
+.blog-post .content p {
+	width: 55%;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+.blog-post ol,
+.blog-post ul {
+	width: 50%;
+	-webkit-padding-start: 5%;
+	margin: 20px 0;
 }
 
 .blog-post .content a {
@@ -200,6 +70,13 @@ main.blog-post {
 	border-bottom: 1px solid transparent;
 }
 
+.blog-post li {
+	text-wrap: pretty;
+	margin-bottom: 10px;
+	line-height: 1.6;
+}
+
+/* Code styling */
 .blog-post pre {
 	background-color: #f8f8f8;
 	border: 1px solid #e1e1e1;
@@ -210,6 +87,8 @@ main.blog-post {
 	font-family: "Apercu Mono", "Courier New", monospace;
 	margin: 20px 0;
 	overflow-x: auto;
+	width: 52.5%;
+	margin-left: 2.5%;
 }
 
 .blog-post code {
@@ -227,24 +106,75 @@ main.blog-post {
 }
 
 .blog-post img {
-	max-width: 100%;
+	max-width: 55%;
 	height: auto;
 	margin-bottom: 20px;
 }
 
-.blog-post ol,
-.blog-post ul {
-	margin: 20px 0;
-	padding-inline-start: 0;
-	margin-left: 3em;
+/* Conversation styling */
+.conversation {
+	width: 55%;
 }
 
-.blog-post li {
-	text-wrap: pretty;
-	margin-bottom: 10px;
-	line-height: 1.6;
+.message {
+	margin-bottom: 15px;
 }
 
+.timestamp {
+	font-size: 0.8em;
+	color: #999;
+	opacity: 0.7;
+	font-weight: normal;
+}
+
+/* Sidenotes and margin notes */
+.sidenote,
+.marginnote {
+	font-family: "Apercu", sans-serif;
+	font-size: 0.9rem;
+	float: right;
+	clear: right;
+	margin-right: -60%;
+	width: 50%;
+	margin-top: 0.3rem;
+	margin-bottom: 0;
+	line-height: 1.3;
+	vertical-align: baseline;
+	position: relative;
+}
+
+.sidenote-number {
+	counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+	font-family: "Apercu", sans-serif;
+	position: relative;
+	vertical-align: baseline;
+}
+
+.sidenote-number:after {
+	content: counter(sidenote-counter);
+	font-size: 0.8rem;
+	top: -0.5rem;
+	left: 0.1rem;
+}
+
+.sidenote:before {
+	content: counter(sidenote-counter) " ";
+	font-size: 0.8rem;
+	top: -0.5rem;
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+	margin-right: -82%;
+	min-width: 59%;
+	text-align: left;
+}
+
+/* Modal styles */
 .modal-overlay {
 	position: fixed;
 	top: 0;
@@ -284,132 +214,32 @@ main.blog-post {
 	transition: transform 0.2s ease;
 }
 
-article {
-	margin-bottom: 40px;
-}
-
-article h2 {
-	font-size: 1.5em;
-	font-weight: 500;
-	margin-bottom: 10px;
-}
-
-article p {
-	font-size: 1em;
-	color: #333;
-	margin-bottom: 10px;
-}
-
-article a {
-	font-size: 1em;
-	color: inherit;
-	text-decoration: none;
-	border-bottom: 1px solid #000;
-}
-
-article a:hover {
-	border-bottom: 1px solid transparent;
-}
-
-footer {
-	text-align: center;
-	padding: 20px;
-	font-size: 0.9em;
-	color: #555;
-}
-
-.timestamp {
-	font-size: 0.8em;
-	color: #999;
-	opacity: 0.7;
-	font-weight: normal;
-}
-
-.message {
-	margin-bottom: 15px;
-}
-
-/* Sidenotes and margin notes styles adapted from Tufte CSS */
-.blog-post {
-	counter-reset: sidenote-counter;
-}
-
-.sidenote,
-.marginnote {
-	float: right;
-	clear: right;
-	margin-right: -60%;
-	width: 50%;
-	margin-top: 0.3rem;
-	margin-bottom: 0;
-	font-size: 0.9rem;
-	line-height: 1.3;
-	vertical-align: baseline;
-	position: relative;
-}
-
-.sidenote-number {
-	counter-increment: sidenote-counter;
-}
-
-.sidenote-number:after,
-.sidenote:before {
-	position: relative;
-	vertical-align: baseline;
-}
-
-.sidenote-number:after {
-	content: counter(sidenote-counter);
-	font-size: 0.8rem;
-	top: -0.5rem;
-	left: 0.1rem;
-}
-
-.sidenote:before {
-	content: counter(sidenote-counter) " ";
-	font-size: 0.8rem;
-	top: -0.5rem;
-}
-
-input.margin-toggle {
-	display: none;
-}
-
-label.sidenote-number {
-	display: inline-block;
-	max-height: 2rem;
-	cursor: pointer;
-}
-
-label.margin-toggle:not(.sidenote-number) {
-	display: none;
-	cursor: pointer;
-}
-
-/* Responsive behavior for mobile */
+/* Mobile responsive */
 @media (max-width: 760px) {
-	label.margin-toggle:not(.sidenote-number) {
-		display: inline;
+	body {
+		width: 84%;
+		padding-left: 8%;
+		padding-right: 8%;
 	}
 
-	.sidenote,
-	.marginnote {
-		display: none;
+	.blog-post .content p,
+	.blog-post .date,
+	.blog-post .author,
+	.conversation {
+		width: 100%;
 	}
 
-	.margin-toggle:checked + .sidenote,
-	.margin-toggle:checked + .marginnote {
-		display: block;
-		float: left;
-		left: 1rem;
-		clear: both;
-		width: 95%;
-		margin: 1rem 2.5%;
-		vertical-align: baseline;
-		position: relative;
+	.blog-post pre {
+		width: 97%;
+		margin-left: 0;
 	}
 
-	label {
-		cursor: pointer;
+	.blog-post ol,
+	.blog-post ul {
+		width: 90%;
+	}
+
+	.blog-post img {
+		max-width: 90%;
 	}
 }

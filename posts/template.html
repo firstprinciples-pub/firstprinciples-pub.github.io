@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>[Blog Post Title] - First Principles</title>
+        <link rel="stylesheet" href="../styles.css">
         <link rel="stylesheet" href="../post.css">
-        <link rel="icon" href="logo.png" type="image/png">
+        <link rel="icon" href="../logo.png" type="image/png">
 
         <!-- Optional: Include MathJax if you need mathematical expressions -->
         <!-- 
@@ -40,13 +41,11 @@
             <div class="date">[Date - e.g., January 1, 2025]</div>
             <div class="author"><i>[Author Name(s)]</i></div>
 
-            <div class="content">
-                <p>This is a template for creating new blog posts.<label
-                        for="sn-template-note"
-                        class="margin-toggle sidenote-number"></label>
-                    <input type="checkbox" id="sn-template-note"
-                        class="margin-toggle" />
-                    <span class="sidenote">This is an example side note. Side
+            <section class="content">
+                <p>This is a template for creating new blog posts.<span
+                        class="sidenote-number"></span>
+                    <span class="sidenote">This is an
+                        example side note. Side
                         notes provide additional context without interrupting
                         the main flow of text.</span></p>
 
@@ -98,21 +97,15 @@ def example_function():
                     </div>
                 </div>
 
-                <h2>Side Notes (Tufte CSS)</h2>
-                <p>You can add side notes like this:<label for="sn-example"
-                        class="margin-toggle sidenote-number"></label>
-                    <input type="checkbox" id="sn-example"
-                        class="margin-toggle" />
-                    <span class="sidenote">Each side note needs a unique ID for
-                        the input and label elements.</span></p>
+                <h2>Side Notes (Simplified)</h2>
+                <p>You can add side notes like this:<span
+                        class="sidenote-number">2</span>
+                    <span class="sidenote"><strong>2.</strong> Each side note
+                        just needs a number and the sidenote span.</span></p>
 
-                <p>For margin notes without numbers, use:<label for="mn-example"
-                        class="margin-toggle">⊕</label>
-                    <input type="checkbox" id="mn-example"
-                        class="margin-toggle" />
+                <p>For margin notes without numbers, use:
                     <span class="marginnote">This is a margin note without a
-                        number. Use the ⊕ symbol or any other
-                        indicator.</span></p>
+                        number.</span></p>
 
                 <h2>Conclusion</h2>
                 <p>Replace all the placeholder content with your actual blog
@@ -125,9 +118,9 @@ def example_function():
                         Prism.js)</li>
                     <li>Include the image modal script if you have clickable
                         images</li>
-                    <li>Use unique IDs for each side note</li>
+                    <li>Use simple sidenote spans with manual numbering</li>
                 </ul>
-            </div>
+            </section>
         </main>
 
         <!-- Optional: Include image modal script if you have clickable images -->
