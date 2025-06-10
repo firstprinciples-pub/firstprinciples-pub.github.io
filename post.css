@@ -213,6 +213,19 @@ blockquote .marginnote {
 	transition: transform 0.2s ease;
 }
 
+/* Header background for blog posts */
+.header.minimized {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 50px;
+	padding: 15px 20px;
+	background-color: white;
+	border-bottom: 1px solid #eee;
+	z-index: 100;
+}
+
 /* Mobile responsive */
 @media (max-width: 760px) {
 	body {
@@ -221,16 +234,67 @@ blockquote .marginnote {
 		padding-right: 8%;
 	}
 
-	.blog-post .content p,
+	.header {
+		padding: 15px 0;
+	}
+
+	.header.minimized {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 50px;
+		padding: 10px 15px;
+		background-color: white;
+		border-bottom: 1px solid #eee;
+		z-index: 100;
+	}
+
+	.header-title {
+		font-size: 1.2em;
+	}
+
+	.header.minimized .header-title a {
+		font-size: 1.2em;
+	}
+
+	main.blog-post {
+		padding: 20px 0;
+		margin-top: 40px;
+	}
+
+	.blog-post h1 {
+		font-size: 2.2em;
+		margin-bottom: 15px;
+	}
+
+	.blog-post h2 {
+		font-size: 1.4em;
+		margin-top: 25px;
+	}
+
+	.blog-post .content h2 {
+		font-size: 1.4em;
+		margin: 25px 0 12px 0;
+	}
+
 	.blog-post .date,
 	.blog-post .author,
+	.blog-post .content p,
 	.conversation {
 		width: 100%;
+	}
+
+	.blog-post .content p {
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 
 	.blog-post pre {
 		width: 97%;
 		margin-left: 0;
+		font-size: 13px !important;
+		padding: 0.8em !important;
 	}
 
 	.blog-post ol,
@@ -238,7 +302,35 @@ blockquote .marginnote {
 		width: 90%;
 	}
 
+	.blog-post li {
+		margin-bottom: 8px;
+	}
+
 	.blog-post img {
 		max-width: 90%;
+		margin: 15px 0;
+	}
+
+	/* Hide sidenotes completely on mobile */
+	.sidenote,
+	.marginnote {
+		display: none;
+	}
+
+	.sidenote-number {
+		display: none;
+	}
+
+	.message {
+		margin-bottom: 12px;
+	}
+
+	.timestamp {
+		font-size: 0.75em;
+	}
+
+	.modal-content {
+		max-width: 95%;
+		max-height: 85%;
 	}
 }
