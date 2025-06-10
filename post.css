@@ -229,25 +229,29 @@ blockquote .marginnote {
 /* Mobile responsive */
 @media (max-width: 760px) {
 	body {
-		width: 84%;
-		padding-left: 8%;
-		padding-right: 8%;
+		width: 100%;
+		margin: 0;
+		padding: 0 5%;
+		box-sizing: border-box;
 	}
 
 	.header {
 		padding: 15px 0;
+		width: 100%;
 	}
 
 	.header.minimized {
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100vw;
+		width: 100%;
 		height: 50px;
 		padding: 10px 15px;
 		background-color: white;
 		border-bottom: 1px solid #eee;
 		z-index: 100;
+		box-sizing: border-box;
+		margin: 0;
 	}
 
 	.header-title {
@@ -260,22 +264,28 @@ blockquote .marginnote {
 
 	main.blog-post {
 		padding: 20px 0;
-		margin-top: 40px;
+		margin-top: 60px;
+		width: 100%;
+		box-sizing: border-box;
 	}
 
 	.blog-post h1 {
 		font-size: 2.2em;
 		margin-bottom: 15px;
+		width: 100%;
+		box-sizing: border-box;
 	}
 
 	.blog-post h2 {
 		font-size: 1.4em;
 		margin-top: 25px;
+		width: 100%;
 	}
 
 	.blog-post .content h2 {
 		font-size: 1.4em;
 		margin: 25px 0 12px 0;
+		width: 100%;
 	}
 
 	.blog-post .date,
@@ -283,46 +293,59 @@ blockquote .marginnote {
 	.blog-post .content p,
 	.conversation {
 		width: 100%;
+		box-sizing: border-box;
 	}
 
 	.blog-post .content p {
 		margin-top: 15px;
 		margin-bottom: 15px;
+		width: 100%;
 	}
 
 	.blog-post pre {
-		width: 97%;
+		width: 100%;
 		margin-left: 0;
 		font-size: 13px !important;
 		padding: 0.8em !important;
+		box-sizing: border-box;
+		overflow-x: auto;
 	}
 
 	.blog-post ol,
 	.blog-post ul {
-		width: 90%;
+		width: 100%;
+		padding-left: 20px;
+		box-sizing: border-box;
 	}
 
 	.blog-post li {
 		margin-bottom: 8px;
+		width: 100%;
 	}
 
 	.blog-post img {
-		max-width: 90%;
+		max-width: 100%;
+		width: 100%;
+		height: auto;
 		margin: 15px 0;
+		box-sizing: border-box;
 	}
 
-	/* Hide sidenotes completely on mobile */
+	/* Completely hide sidenotes and related elements on mobile */
 	.sidenote,
-	.marginnote {
-		display: none;
+	.marginnote,
+	.sidenote-number {
+		display: none !important;
 	}
 
-	.sidenote-number {
-		display: none;
+	.sidenote-number:after {
+		display: none !important;
 	}
 
 	.message {
 		margin-bottom: 12px;
+		width: 100%;
+		box-sizing: border-box;
 	}
 
 	.timestamp {
@@ -332,5 +355,30 @@ blockquote .marginnote {
 	.modal-content {
 		max-width: 95%;
 		max-height: 85%;
+	}
+
+	/* Ensure conversation messages don't overflow */
+	.conversation {
+		width: 100%;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+	}
+
+	.conversation .message {
+		width: 100%;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+	}
+
+	/* Ensure code blocks don't cause horizontal scroll */
+	.blog-post code {
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+	}
+
+	/* Ensure all content containers respect mobile boundaries */
+	.blog-post .content {
+		width: 100%;
+		overflow-x: hidden;
 	}
 }
