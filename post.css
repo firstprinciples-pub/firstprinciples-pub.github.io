@@ -213,6 +213,10 @@ blockquote .marginnote {
 	transition: transform 0.2s ease;
 }
 
+mjx-container {
+	width: 55% !important;
+}
+
 /* Mobile responsive */
 @media (max-width: 760px) {
 	body {
