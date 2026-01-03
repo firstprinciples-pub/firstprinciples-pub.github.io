@@ -87,7 +87,7 @@ main.blog-post {
 	font-family: "Apercu Mono", "Courier New", monospace;
 	margin: 20px 0;
 	overflow-x: auto;
-	width: 52.5%;
+	width: 55% !important;
 	margin-left: 2.5%;
 }
 
