@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>n choose k - First Principles</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../post.css">
+        <link rel="icon" href="../logo.png" type="image/png">
+        <script
+            src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <header class="header minimized">
+            <h1 class="header-title">
+                <a href="../index.html">First Principles</a>
+            </h1>
+        </header>
+
+        <main class="blog-post">
+            <h1>n choose k</h1>
+            <div class="date">December 28, 2025</div>
+            <div class="author"><i>Michael Li</i></div>
+
+            <section class="content">
+                <p>I'm home for winter break, which has meant long morning walks
+                    - inspired (a little) by <a
+                        href="https://x.com/OxUniMaths/status/1909991978835550325"
+                        target="_blank">Roger Penrose</a>. On today's walk I
+                    decided to try deriving the formula for ${n \choose k}$.
+                    Almost immediately, I recalled the familiar-looking
+                    formula</p>
+
+                $${n \choose k}=\frac{n!}{(n-k)!k!}$$
+
+                <p>But it's not that interesting to simply regurgitate what I
+                    learned in high school. Suppose we take the formula as
+                    given. The real question is: how do we work backwards from
+                    $\frac{n!}{(n-k)!k!}$ to see, cleanly, why it counts the
+                    number of <em>distinct</em> ways to choose $k$ items from a
+                    set of $n$?</p>
+
+                <p>The numerator is $n!$,<span
+                        class="sidenote-number"></span><span class="sidenote">A
+                        disclaimer: most of what I'll say next is probably
+                        trivial. I'm going to talk about it as if it isn't, to
+                        walk through how I thought about this. There will likely
+                        be parts that are over-explained.</span> which we know
+                    is the number of ways to
+                    order $n$ items. This seems odd - we're trying to count
+                    selections, not orderings.</p>
+
+                <p>How does that relate to choosing $k$ items?</p>
+
+                <p>It turns out there's an equivalent framing that makes the
+                    $n!$ sensible. Take an ordering of all $n$ items, and
+                    declare that the "chosen" items are simply the first $k$
+                    items in the ordering. The remaining $n-k$ are "not chosen."
+                    Now every permutation of $n$ items induces a choice.</p>
+
+                <p>Now we're overcounting, in two ways. First, we don't care how
+                    the unchosen $n-k$ items are ordered among themselves -
+                    that's $(n-k)!$ redundant arrangements. Second, we don't
+                    care how the chosen $k$ items are ordered either - that's
+                    $k!$ more. Dividing by both gives us</p>
+
+                $${n \choose k}=\frac{n!}{(n-k)!k!}$$
+
+                <p style="text-align: center;">⁂</p>
+
+                <p>After working through the permutation argument, I had the
+                    slightly annoying realization that I'd taken the long way
+                    around. It turns out there's a nicer version of the ${n
+                    \choose k}$ formula, which is (in my opinion) more
+                    intuitive.</p>
+
+                <p>Notice:</p>
+                $$\frac{n!}{(n-k)!}
+                =\frac{n(n-1)\cdots(n-(k-1))(n-k)!}{(n-k)!}
+                =n(n-1)\cdots(n-k+1)$$
+
+                <p>So we can rewrite</p>
+
+                $${n \choose k}=\frac{n(n-1)\cdots(n-k+1)}{k!}$$
+
+                <p>Why is this nicer? The numerator now has a direct
+                    interpretation: it's simply the number of ways to choose $k$
+                    items
+                    <em>in order</em>.<span class="sidenote-number"></span><span
+                        class="sidenote">This numerator is called a <em>falling
+                            factorial</em>, sometimes written $(n)_k =
+                        n(n-1)\cdots(n-k+1)$.</span> Pick the first item: $n$
+                    choices. Pick the second: $n-1$ remain. And so on, until
+                    you've made $k$ picks. This is probably what you'd
+                    first write down if you tried to derive ${n \choose k}$ from
+                    scratch. Then we divide by $k!$ because we don't care about
+                    the order in which we picked them.</p>
+
+                <p style="text-align: center;">⁂</p>
+
+                <p>So the formula is basically: count choices <em>with</em>
+                    order, then divide out the ordering importance. In one view,
+                    you consider permutations and ignore orderings
+                    within the first $k$ slots and within the last $n-k$ slots.
+                    In the other view, you count $k$-step picks directly via the
+                    falling factorial and then divide by $k!$. Either way you
+                    land at the same object:</p>
+
+                $${n \choose
+                k}=\frac{n!}{(n-k)!k!}=\frac{n(n-1)\cdots(n-k+1)}{k!}$$
+
+                <p>Both formulas have their place. The first form,
+                    $\frac{n!}{(n-k)!k!}$, is symmetric in $k$ and $n-k$, which
+                    makes it useful in proofs, e.g. it's immediately obvious
+                    that ${n \choose k} = {n \choose n-k}$. The second form,
+                    $\frac{n(n-1)\cdots(n-k+1)}{k!}$, is computationally nicer:
+                    you only multiply $k$ terms in the numerator instead of $n$,
+                    which matters when $k$ is small relative to $n$.</p>
+            </section>
+        </main>
+
+        <script src="../image-modal.js"></script>
+    </body>
+</html>
