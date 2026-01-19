@@ -38,6 +38,7 @@ main.blog-post {
 	line-height: 1.6em;
 	white-space: normal !important;
 	white-space: pre-wrap;
+	counter-reset: sidenote-counter;
 }
 
 .blog-post .content h2 {
