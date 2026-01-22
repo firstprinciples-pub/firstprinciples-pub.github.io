@@ -8,13 +8,11 @@ main.blog-post {
 
 .blog-post h1 {
 	font-size: 3em;
-	font-weight: 400;
 	text-align: left;
 	margin-bottom: 10px;
 }
 
 .blog-post h2 {
-	font-weight: 500;
 	margin: 0;
 	margin-top: 30px;
 }
@@ -187,7 +185,6 @@ blockquote .marginnote {
 	align-items: center;
 	justify-content: center;
 	z-index: 1000;
-	cursor: pointer;
 }
 
 .modal-content {
@@ -206,7 +203,6 @@ blockquote .marginnote {
 }
 
 .clickable-img {
-	cursor: pointer;
 	display: block;
 	max-width: 100%;
 	height: auto;
