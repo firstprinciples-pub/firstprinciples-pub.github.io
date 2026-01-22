@@ -68,7 +68,7 @@
 	const toggleBtn = document.getElementById("toggleBtn");
 
 	let isKiki = true;
-	let animationDelay = 70;
+	let animationDelay = 100;
 
 	function scalePath(path, scale) {
 		return path.replace(/[\d.-]+/g, (num) =>
