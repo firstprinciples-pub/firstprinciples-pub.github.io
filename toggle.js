@@ -1,9 +1,7 @@
 (function () {
-	// Create the container for the toggle
 	const container = document.createElement("div");
 	container.className = "toggle-container-fixed";
 
-	// Toggle Button HTML
 	container.innerHTML = `
         <button class="toggle-button-small" id="toggleBtn" aria-label="Toggle shape">
             <svg class="shape-small" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +12,6 @@
 
 	document.body.appendChild(container);
 
-	// Add styles dynamically (or we could put this in styles.css)
 	const style = document.createElement("style");
 	style.textContent = `
         .toggle-container-fixed {
@@ -52,7 +49,7 @@
             transition: fill 0.3s ease;
             cursor: pointer;
         }
-        .toggle-button-small:hover .morph-path { fill: #f5f5f5; }
+        .toggle-button-small:hover .morph-path { fill: #000; }
         .title-label-small {
             margin-top: 4px;
             font-size: 12px;
@@ -63,7 +60,6 @@
     `;
 	document.head.appendChild(style);
 
-	// Logic
 	const morphPath = document.getElementById("morphPath");
 	const toggleBtn = document.getElementById("toggleBtn");
 
@@ -76,7 +72,6 @@
 		);
 	}
 
-	// Frames from test.html
 	const kiki =
 		"M 145,20 L 125,85 L 185,100 L 135,115 L 160,165 L 110,135 L 105,190 L 90,135 L 35,160 L 75,115 L 20,85 L 85,95 L 75,50 L 105,85 Z";
 	const bouba =
@@ -119,7 +114,6 @@
 	toggleBtn.addEventListener("click", () => {
 		toggleBtn.disabled = true;
 		if (isKiki) {
-			// Switch to Bouba
 			animateTransition(kikiToBoubaFrames, () => {
 				toggleBtn.disabled = false;
 			});
@@ -127,7 +121,6 @@
 			localStorage.setItem("theme", "bouba");
 			isKiki = false;
 		} else {
-			// Switch to Kiki
 			animateTransition(boubaToKikiFrames, () => {
 				toggleBtn.disabled = false;
 			});
@@ -136,4 +129,4 @@
 			isKiki = true;
 		}
 	});
-})(); // End IIFE
+})();
