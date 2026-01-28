@@ -1,6 +1,6 @@
 # First Principles
 
-This is a blog.
+This is a blog. Read it at [firstprinciples.pub](https://firstprinciples.pub/).
 
 ## Adding a New Post
 
