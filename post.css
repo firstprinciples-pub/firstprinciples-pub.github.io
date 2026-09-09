@@ -37,6 +37,7 @@ main.blog-post {
 	white-space: normal !important;
 	white-space: pre-wrap;
 	counter-reset: sidenote-counter;
+	position: relative;
 }
 
 .blog-post .content h2 {
@@ -63,10 +64,12 @@ main.blog-post {
 	color: inherit;
 	text-decoration: none;
 	border-bottom: 1px solid #000;
+	cursor: pointer;
 }
 
 .blog-post .content a:hover {
-	border-bottom: 1px solid transparent;
+	border-bottom: 1px solid #999;
+	cursor: pointer;
 }
 
 .blog-post li {
