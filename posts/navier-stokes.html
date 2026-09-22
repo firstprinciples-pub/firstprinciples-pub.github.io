@@ -4,8 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>To Serve Man - First Principles</title>
-        <link rel="stylesheet" href="../styles.css">
-        <link rel="stylesheet" href="../post.css">
+        <link rel="stylesheet" href="../post-serif.css">
         <link rel="icon" href="../logo.png" type="image/png">
         <script
             src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -19,68 +18,17 @@
                 }
             };
         </script>
-        <style>
-            /* 2.5% indent + 52.5% width lines the quote's right edge up with
-               the 55% text column, so its sidenotes can match the paragraph ones */
-            .blog-post .subtitle {
-                width: 55%;
-                font-size: 1.15em;
-                line-height: 1.4;
-                color: rgb(90, 90, 90);
-                margin: 0 0 4px 0;
-            }
-
-            @media (max-width: 760px) {
-                .blog-post .subtitle {
-                    width: 100%;
-                }
-            }
-
-            .blog-post blockquote {
-                width: 52.5%;
-                margin: 20px 0 20px 2.5%;
-                padding-left: 1%;
-                border-left: 1px solid #ddd;
-                font-size: 0.95em;
-                color: rgb(60, 60, 60);
-            }
-
-            /* Percentages here resolve against the quote's content box (51.5% of
-               the column), so the paragraph values (27.5% wide, -33% margin of
-               the column) scale up by 1 / 0.515 */
-            .blog-post blockquote .sidenote {
-                width: 53.4%;
-                min-width: 0;
-                margin-right: -64.08%;
-                color: rgb(28, 28, 28);
-            }
-
-            @media (max-width: 760px) {
-                .blog-post blockquote {
-                    width: 100%;
-                    margin-left: 0;
-                    box-sizing: border-box;
-                }
-            }
-        </style>
     </head>
     <body>
-        <header class="header minimized">
-            <h1 class="header-title">
-                <a href="../index.html">First Principles</a>
-            </h1>
-        </header>
-
         <main class="blog-post">
             <h1>To Serve Man</h1>
-            <div class="subtitle">A timeline of the Navier-Stokes
-                announcement and the year of AI in mathematics that led up
-                to it.</div>
             <div class="date">September 9, 2026</div>
             <div class="author"><i>Michael Li</i></div>
+            <img class="cover" src="../images/buffalo-trail.jpg"
+                alt="Buffalo Trail: The Impending Storm by Albert Bierstadt">
 
             <section class="content">
-                <p>By now, most people have heard that OpenAI has <a
+                <p>By now, most people have heard that OpenAI has likely <a
                         href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/"
                         target="_blank">solved</a> <a
                         href="https://www.wired.com/story/openai-navier-stokes-math-discovery-academics/"
@@ -93,37 +41,29 @@
                         target="_blank">Problem</a>; specifically, a proof
                     of finite-time blowup for the forced three-dimensional
                     Navier-Stokes equations, announced yesterday afternoon
-                    at 1:20pm ET.<span class="sidenote-number"></span><span
+                    at 1:20 p.m. ET.<span class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://x.com/OpenAI/status/2097374640582668336"
                             target="_blank">@OpenAI</a>, September 8, 2026,
-                        1:20pm ET</span> As someone who has followed the story
-                    somewhat closely, along with the surrounding discourse
-                    around AI in math, I wanted to write a short blog post
-                    that lays out a timeline of events, and (hopefully)
-                    contextualizes this result with the broader discourse
-                    over the past year.</p>
-
-                <!-- <p>
-                    Disclaimer: I'm not a mathematician, and I don't have any
-                    juicy inside information. I'll primarily be citing tweets
-                    and posts from various mathematicians and AI researchers.
-                </p> -->
+                        1:20 p.m. ET</span> As someone who has followed the story
+                    somewhat closely, along with the broader debate around AI
+                    in mathematics, I wanted to write a short blog post that
+                    lays out a timeline of events, and (hopefully) contextualizes
+                    this result with developments in the past year.</p>
 
                 <h2>Trust me bro</h2>
 
                 <p>Towards the beginning of 2026, AI in mathematics was
                     still treated as somewhat of a novelty. There were some
                     interesting results, mostly on Erdős problems, mostly
-                    with commerically available AI models, and mostly from a
+                    with commercially available AI models, and mostly from a
                     few people<span class="sidenote-number"></span><span
                         class="sidenote">Primarily <a
                             href="https://x.com/AcerFur"
                             target="_blank">@AcerFur</a>
                         and <a href="https://x.com/Liam06972452"
                             target="_blank">@Liam06972452</a>.</span> on
-                    Twitter. Mathematicians were paying attention, though
-                    without much alarm. For example, after one such problem
+                    Twitter. After one such problem
                     was solved in January, Terence Tao<span
                         class="sidenote-number"></span><span
                         class="sidenote">the Fields Medal-winning,
@@ -144,9 +84,9 @@
                             target="_blank">@tao</a>, January 7,
                         2026.</span></p>
 
-                <p>This stopped being a novelty in May, when OpenAI
-                    announced that an internal model had disproved the Erdős
-                    unit distance conjecture,<span
+                <p>The results being produced began to look like less of a
+                    novelty in May, when OpenAI announced that an internal
+                    model had disproved the Erdős unit distance conjecture,<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/"
@@ -160,12 +100,16 @@
                             href="https://arxiv.org/abs/2605.20695"
                             target="_blank">Remarks on the disproof of the unit
                             distance conjecture</a>, May 20, 2026.</span> This
-                    sort
-                    of focus on human understanding of these proofs,
-                    however, did not last very long.</p>
+                    seemed like an encouraging model for AI-assisted
+                    mathematics: the model produced a result, while
+                    mathematicians worked together to make it legible and
+                    useful to the field. The proof was
+                    treated not as the end of the process, but as the beginning
+                    of one. This sort of human-centered focus, however, did not
+                    last very long.</p>
 
-                <p>By the summer, the character of the results being posted
-                    had changed quite a bit. On July 19, Levent Alpöge (a
+                <p>By the summer, the character of results being posted
+                    had changed quite a bit. On July 19, Levent Alpöge (a mathematician and
                     member of technical staff at Anthropic) posted a
                     counterexample to the Jacobian conjecture:<span
                         class="sidenote-number"></span><span
@@ -183,18 +127,19 @@
                     0, -1/4), (1, -3/2, 13/2), and (-1, 3/2, 13/2) to (-1/4,
                     0, 0)</blockquote>
 
-                <p>Notably, this was a black-box result: no paper
-                    accompanied it, nor any explanation of how the
-                    counterexample had been found. Some understanding of it
-                    was recovered afterwards, but only after other people<span
+                <p>Notably, this was a black-box proof: although the
+                    counterexample itself was easy to verify as correct, no
+                    paper accompanied it, nor was there any explanation of how
+                    it had been found. A better understanding emerged only
+                    afterward, when other mathematicians (with assistance from
+                    AI models)<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://x.com/davikrehalt/status/2079175065695035442"
                             target="_blank">@davikrehalt</a>, July 20,
                         2026.</span>
-                    went and did that work (with the use of AI models).
-                    Subsequently, Alpöge posted a resolution of the Hadamard
-                    conjecture on August 12,<span
+                    worked to find one. Alpöge subsequently posted a resolution
+                    of the Hadamard matrix conjecture on August 12,<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://x.com/__alpoge__/status/2087504790435840207"
@@ -205,9 +150,9 @@
                         class="sidenote"><a
                             href="https://x.com/__alpoge__/status/2091639597193368014"
                             target="_blank">@__alpoge__</a>, August 23,
-                        2026.</span>.</p>
+                        2026.</span></p>
 
-                <p> The labs followed a similar trend. On August 1, OpenAI
+                <p>The labs followed a similar trend. On August 1, OpenAI
                     published ten results attributed to an internal version
                     of Astra,<span class="sidenote-number"></span><span
                         class="sidenote"><a
@@ -220,7 +165,7 @@
                     results) did not come with a companion paper written by
                     mathematicians with domain expertise, the way the unit
                     distance result had been. Instead, the only proofs
-                    provided were entirely ones entirely AI-written. Again,
+                    provided were entirely AI-written. Again,
                     understanding had to come from outside. Francesco
                     Fournier-Facio, a mathematician at Cambridge,
                     independently worked out the criterion underneath the
@@ -230,22 +175,25 @@
                         class="sidenote"><a
                             href="https://arxiv.org/abs/2608.02025"
                             target="_blank">A torsion-free non-sofic group</a>,
-                        August 3, 2026.</span>. Similarly, on August 10,
-                    Anthropic announced that an unreleased model had raised
-                    the lower bound on the proportion of zeros of the zeta
-                    function lying on the critical line from 41.6% to 67.2%,
-                    after a member of technical staff asked it to "take a
-                    real stab" at the Riemann hypothesis and then mostly
-                    sent it words of encouragement.<span
+                        August 3, 2026.</span></p>
+
+                    <p> Similarly, on August 10, Anthropic announced that an 
+                    unreleased model had raised the lower bound on the 
+                    proportion of zeros of the zeta function lying on the 
+                    critical line from 41.6% to 67.2%, after a member of 
+                    technical staff asked it to "take a real stab" at the 
+                    Riemann hypothesis and then mostly sent it words of 
+                    encouragement.<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://www.anthropic.com/research/riemann-zeta"
                             target="_blank">Learning more about Claude's
                             mathematical capabilities</a>, August 10,
                         2026.</span>
-                    Like others, this was not released with a companion
-                    paper, nor any focus on helping mathematicians
-                    understand this result, beyond the correctness of it.</p>
+                    Like several other announcements, this one
+                    came without any companion paper aimed at helping
+                    mathematicians understand the argument beyond simply
+                    assessing its correctness.</p>
 
                 <h2>Hype moments and aura</h2>
 
@@ -256,12 +204,10 @@
                     at IPAM,<span class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://www.youtube.com/watch?v=AXlif6z9a2A"
-                            target="_blank">Accelerating Math and Theoretical
-                            Physics with AI</a>, IPAM, UCLA.</span> Tao
-                    described
-                    how AI-generated proofs would spend pages on trivial
+                            target="_blank">Reflections on the Foundations of Interpretability workshop</a>, IPAM, UCLA.</span> Tao
+                    described how AI-generated proofs would spend pages on trivial
                     details and then a single line on the key idea. The
-                    larger complaint was that mathematics was being used as
+                    other complaint was that mathematics was being used as
                     a benchmark for AI companies, strip-mined<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
@@ -287,7 +233,7 @@
                     the mathematical landscape, making it increasingly
                     difficult to inhabit after each blast.</blockquote>
 
-                <p>Terence Tao (previously a vocal proponent of AI in math)<span
+                <p>Tao (previously a vocal proponent of AI in math)<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://www.quantamagazine.org/how-terry-tao-became-an-evangelist-for-ai-in-math-20260608/"
@@ -308,7 +254,7 @@
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tao/117204930249967695"
-                            target="_blank">@tao</a>, September 2, 2026, 11:15pm
+                            target="_blank">@tao</a>, September 2, 2026, 11:15 p.m.
                         ET.</span></p>
 
                 <blockquote>It may become necessary to declare certain
@@ -327,7 +273,7 @@
                     answer:<span class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tao/117207849921390904"
-                            target="_blank">@tao</a>, September 3, 2026, 11:37am
+                            target="_blank">@tao</a>, September 3, 2026, 11:37 a.m.
                         ET.</span></p>
 
                 <blockquote>[T]here is now a scenario in which an autonomous
@@ -346,7 +292,7 @@
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tao/117208617602946453"
-                            target="_blank">@tao</a>, September 3, 2026, 2:53pm
+                            target="_blank">@tao</a>, September 3, 2026, 2:53 p.m.
                         ET.</span></p>
 
                 <blockquote>But the currently fashionable practice of
@@ -372,7 +318,7 @@
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tao/117208617602946453"
-                            target="_blank">@tao</a>, September 3, 2026, 2:53pm
+                            target="_blank">@tao</a>, September 3, 2026, 2:53 p.m.
                         ET.</span></p>
 
                 <blockquote>...we were treated to the unedifying spectacle
@@ -393,7 +339,7 @@
                         class="sidenote"><a
                             href="https://x.com/AndrewCurran_/status/2096062392442724805"
                             target="_blank">@AndrewCurran_</a>, September 4,
-                        2026, 10:26pm ET.</span></p>
+                        2026, 10:26 p.m. ET.</span></p>
                 <blockquote>It's fun to make predictions. Here's a new one:
                     Anthropic has solved a Millennium Prize Problem. And
                     I'll be even more specific. Claude has solved
@@ -405,7 +351,7 @@
                     thread:<span class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tao/117219101339291693"
-                            target="_blank">@tao</a>, September 5, 2026, 11:19am
+                            target="_blank">@tao</a>, September 5, 2026, 11:19 a.m.
                         ET.</span></p>
 
                 <blockquote>[I]n response to recent rumors about a possible
@@ -419,31 +365,31 @@
 
                 <h2>Let ten thousand agents bloom!</h2>
 
-                <p>At 11:58pm ET on Monday, September 7, Tristan Buckmaster<span
+                <p>At 11:58 p.m. ET on Monday, September 7, Tristan Buckmaster<span
                         class="sidenote-number"></span><span
                         class="sidenote">Professor of mathematics at NYU's
                         Courant Institute.</span> posted three results, in a
                     joint collaboration with Levent Alpöge: finite-time
                     blowup with smooth forcing for incompressible porous
-                    media, for Boussinesq, and for 3d incompressible Euler,
+                    media, for Boussinesq, and for 3D incompressible Euler,
                     with Lean formalizations for each.<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tristanbuckmaster@mastodon.social/117233413735526010"
                             target="_blank">@tristanbuckmaster</a>, September 7,
-                        2026, 11:58pm ET.</span> Alongside them, he posted a
-                    four page statement,<span
+                        2026, 11:58 p.m. ET.</span> Alongside them, he posted a
+                    four-page statement,<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://cims.nyu.edu/~tristanb/statement.pdf"
                             target="_blank">statement.pdf</a>.</span> explaining
                     the following.</p>
 
-                <p>On September 3, with the rumors circulating, Tristan had
-                    emailed a mathematician at OpenAI to correct the record,
-                    and over
-                    the following days was asked to meet with increasing
-                    urgency. On a call on Sunday, September 6, he was told
+                <p>On September 3, with the rumors circulating, Buckmaster
+                    emailed a mathematician at OpenAI to correct the record.
+                    Over the following days, he was asked with increasing
+                    urgency to meet. On a call on Sunday, September 6, he was
+                    told
                     that an internal OpenAI model had proved finite-time
                     blowup for forced Navier-Stokes:</p>
 
@@ -468,7 +414,7 @@
                             target="_blank">On the Navier-Stokes Millennium
                             Prize Problem</a>.</span></blockquote>
 
-                <p>He was then given an ultimatum:</p>
+                <p>He was then offered two proposals:</p>
 
                 <blockquote>Two proposals were offered to me. The first was
                     that we post our Euler result, and that OpenAI post its
@@ -497,16 +443,16 @@
                         class="sidenote"><a
                             href="https://x.com/SebastienBubeck/status/2097379415747342689"
                             target="_blank">@SebastienBubeck</a>, September 8,
-                        2026, 1:39pm ET.</span></p>
+                        2026, 1:39 p.m. ET.</span></p>
 
                 <blockquote>We began working on the Millennium problems due
                     to viral twitter rumors that Anthropic had resolved 2
-                    Millenium problems.</blockquote>
+                    Millenium [sic] problems.</blockquote>
 
                 <p>He said they saw none of Buckmaster and Alpöge's work
                     until it was released, and that they had assumed
                     Anthropic was behind the rumors because Alpöge's posts
-                    use Anthropic models. He made sure to emphasize that:</p>
+                    use Anthropic internal models. He made sure to emphasize that:</p>
 
                 <blockquote>although a group of people was involved in our
                     efforts, we collectively had no research-level expertise
@@ -515,32 +461,37 @@
                     mathematical content.</blockquote>
 
                 <p>The difference from May is shocking. The unit distance
-                    result had been posted alongside a companion paper by nine
-                    mathematicians, invited to review the proof and develop
-                    a more comprehensive understanding of it. The Navier-Stokes
-                    result, rather than the result of collaboration,
-                    came out of direct competition with two people already
-                    working on the problem. At no point did understanding
-                    seem to be even a minor consideration.</p>
+                    result had been posted alongside a companion piece written
+                    by nine outside domain experts, invited to review the proof
+                    and develop a more comprehensive understanding of it. The
+                    Navier-Stokes result, on the other hand, was the result of
+                    direct competition against two people already working on the
+                    problem. OpenAI focused on producing and verifying the
+                    result as quickly as possible, in an "unedifying" rush
+                    similar to the one Tao observed with the bounded-gaps
+                    result. The broader work of making the result understandable
+                    was largely neglected, and the lack of domain expertise
+                    was, if anything, touted as evidence of their
+                    accomplishment.</p>
 
                 <p style="text-align: center;">⁂</p>
 
                 <!-- <h2>A Series of Unfortunate Events</h2> -->
 
-                <p>Tao's post, ironically enough, turned out to be a
+                <p>Tao's post, ironically enough, turned out to be a somewhat of
                     self-fulfilling prophecy. By choosing Navier-Stokes as
                     his example of how an AI-generated solution could
                     inhibit the development of a field, he inadvertently
-                    fueled rumors about the problem being solved, that
-                    in short fashion led to the problem being solved,
-                    more or less in the way he described.</p>
+                    fueled existing rumors about the problem being solved, which, in
+                    almost comically short order, contributed to the problem
+                    being solved, more or less in the way he described.</p>
 
                 <p>After the announcement from OpenAI, he made a new post,
                     reflecting on the state of mathematics:<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tao/117237320796901560"
-                            target="_blank">@tao</a>, September 8, 2026, 4:32pm
+                            target="_blank">@tao</a>, September 8, 2026, 4:32 p.m.
                         ET.</span></p>
 
                 <blockquote> We have now seen that even the rumor of someone
@@ -553,16 +504,39 @@
                     traditions of open science and do serious long-term
                     damage to the future of the field.</blockquote>
 
+                <p style="text-align: center;">⁂</p>
+
+                <p>For more details about the allegations that OpenAI plagiarized
+                    in-progress work from Buckmaster and Alpöge, read <a
+                        href="https://simonwillison.net/2026/Sep/8/on-navier-stokes/"
+                        target="_blank">Simon Willison's account</a>. If you're
+                    interested in what other mathematicians think,
+                    I recommend reading <a
+                        href="https://tasmin.substack.com/p/mathematicians-need-to-act"
+                        target="_blank">Mathematicians Need to Act</a> and <a
+                        href="https://noncommutativeanalysis.wordpress.com/2026/08/21/whats-not-new/"
+                        target="_blank">What's Not New</a>. For a wider range
+                    of perspectives, listen or read Quanta's <a
+                        href="https://www.quantamagazine.org/live-from-icm-2026-what-is-math-for-in-the-age-of-ai-20260903/"
+                        target="_blank">What Is Math For in the Age of
+                        AI?</a>, a live recording from the recent ICM that
+                    brings together three mathematicians to discuss what they
+                    value in their work.</p>
+
                 <p>If this is all a bit too depressing, I recommend reading <a
                         href="https://www.nytimes.com/2026/09/06/science/92-year-old-mathematician-apprentice.html"
                         target="_blank">The 92-Year-Old Mathematician and
                         the Teenage Apprentice</a>, published a few days ago,
                     about Joan Birman and the fifteen-year-old she took on
                     as a mentee at the age of 92.</p>
+
+                <p><em>The cover painting is <a
+                            href="https://www.nga.gov/artworks/166427-buffalo-trail-impending-storm"
+                            target="_blank">Buffalo Trail: The Impending
+                            Storm</a> by Albert Bierstadt, 1869.</em></p>
             </section>
         </main>
 
-        <script src="../image-modal.js"></script>
         <script src="../sidenotes.js"></script>
         <script src="../toggle.js"></script>
     </body>
