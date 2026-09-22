@@ -1,62 +1,156 @@
-main {
-	width: auto;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@font-face {
+	font-family: "Grenette Pro";
+	src: url("./fonts/GrenettePro/grenette-regular-pro.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
 }
 
-main.blog-post {
-	padding: 40px 0;
+@font-face {
+	font-family: "Grenette Pro";
+	src: url("./fonts/GrenettePro/grenette-italic-pro.ttf") format("truetype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "MNKY Albert";
+	src: url("./fonts/MNKYAlbert/MNKYAlbertTRIAL-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "MNKY Albert";
+	src: url("./fonts/MNKYAlbert/MNKYAlbertTRIAL-Italic.otf") format("opentype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Apercu Mono";
+	src: url("./fonts/Apercu/Apercu Pro Mono.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* A centered text column, with sidenotes hanging into the right margin. On
+   narrower screens the column slides left just enough to keep room for them. */
+:root {
+	--font-body: "Merriweather", Georgia, serif;
+	--font-header: "Grenette Pro", Georgia, serif;
+	--font-mono: "Apercu Mono", "Courier New", monospace;
+	--column-width: min(760px, 100vw - 248px);
+	--sidenote-width: clamp(160px, calc((100vw - var(--column-width)) / 2 - 48px), 300px);
+	--sidenote-gap: 40px;
+}
+
+body.theme-kiki {
+	--font-body: "Space Mono", monospace;
+	--font-header: "MNKY Albert", serif;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 80px 24px;
+	font-family: var(--font-body);
+	font-size: 1em;
+	line-height: 1.7;
+	color: rgb(28, 28, 28);
+	background-color: #fff;
+	transition: font-family 0.3s ease;
+}
+
+.blog-post {
+	width: var(--column-width);
+	margin-left: max(
+		0px,
+		min(
+			calc((100vw - 48px - var(--column-width)) / 2),
+			calc(100vw - 48px - var(--column-width) - var(--sidenote-gap) - var(--sidenote-width))
+		)
+	);
+}
+
+h1,
+h2 {
+	font-family: var(--font-header);
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+/* Site header: a fixed link back to the index */
+.header.minimized {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 24px;
+	z-index: 100;
+}
+
+.header-title {
+	font-size: 20px;
+}
+
+.header-title a {
+	color: black;
+	text-decoration: none;
+}
+
+.header-title a:hover {
+	color: grey;
+}
+
+.header-title a:hover::after {
+	content: "go back";
+	display: block;
+	font-size: 14px;
+	color: grey;
 }
 
 .blog-post h1 {
 	font-size: 3em;
-	text-align: left;
 	margin-bottom: 10px;
 }
 
 .blog-post h2 {
-	margin: 0;
-	margin-top: 30px;
+	font-size: 1.6em;
+	margin: 30px 0 15px 0;
 }
 
 .blog-post .date,
 .blog-post .author {
 	font-size: 0.9em;
 	color: #666;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 55%;
+	margin: 10px 0;
 }
 
 .blog-post .author {
 	margin-bottom: 30px;
 }
 
+.blog-post .cover {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-top: 24px;
+}
+
 .blog-post .content {
-	font-size: 1em;
-	color: rgb(28, 28, 28);
-	line-height: 1.6em;
-	white-space: normal !important;
-	white-space: pre-wrap;
 	counter-reset: sidenote-counter;
 	position: relative;
 }
 
-.blog-post .content h2 {
-	font-family: "EB Garamond", serif;
-	font-weight: 500;
-	margin: 30px 0 15px 0;
-	font-size: 1.5em;
-}
-
 .blog-post .content p {
-	width: 55%;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.blog-post ol,
-.blog-post ul {
-	width: 50%;
-	-webkit-padding-start: 5%;
 	margin: 20px 0;
 }
 
@@ -64,41 +158,60 @@ main.blog-post {
 	color: inherit;
 	text-decoration: none;
 	border-bottom: 1px solid #000;
-	cursor: pointer;
 }
 
 .blog-post .content a:hover {
-	border-bottom: 1px solid #999;
-	cursor: pointer;
+	border-bottom-color: #999;
+}
+
+.blog-post blockquote {
+	margin: 20px 0 20px 1.5em;
+	padding-left: 1em;
+	border-left: 1px solid #ddd;
+	font-size: 0.95em;
+	color: rgb(60, 60, 60);
+}
+
+.blog-post blockquote .sidenote {
+	color: rgb(28, 28, 28);
+}
+
+.blog-post ol,
+.blog-post ul {
+	padding-left: 1.5em;
+	margin: 20px 0;
 }
 
 .blog-post li {
 	text-wrap: pretty;
 	margin-bottom: 10px;
-	line-height: 1.6;
 }
 
-/* Code styling */
+.blog-post .content img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 20px 0;
+}
+
 .blog-post pre {
 	background-color: #f8f8f8;
 	border: 1px solid #e1e1e1;
-	font-size: 14px !important;
-	border-radius: 0.5rem !important;
-	padding: 1em !important;
-	line-height: 1.6 !important;
-	font-family: "Apercu Mono", "Courier New", monospace;
+	border-radius: 0.5rem;
+	padding: 1em;
 	margin: 20px 0;
+	font-family: var(--font-mono);
+	font-size: 14px;
+	line-height: 1.6;
 	overflow-x: auto;
-	width: 55% !important;
-	margin-left: 2.5%;
 }
 
 .blog-post code {
 	background-color: #f0f0f0;
 	border-radius: 3px;
-	font-family: "Apercu Mono", "Courier New", monospace;
-	font-size: 0.9em;
 	padding: 2px 4px;
+	font-family: var(--font-mono);
+	font-size: 0.9em;
 }
 
 .blog-post pre code {
@@ -107,41 +220,31 @@ main.blog-post {
 	padding: 0;
 }
 
-.blog-post img {
-	max-width: 55%;
-	height: auto;
-	margin-bottom: 20px;
+mjx-container {
+	width: 100% !important;
 }
 
-/* Conversation styling */
-.conversation {
-	width: 55%;
-}
-
+/* Conversation transcripts */
 .message {
 	margin-bottom: 15px;
+	overflow-wrap: break-word;
 }
 
 .timestamp {
 	font-size: 0.8em;
 	color: #999;
-	opacity: 0.7;
-	font-weight: normal;
 }
 
-/* Sidenotes and margin notes */
+/* Sidenotes */
 .sidenote,
 .marginnote {
-	font-family: "Apercu", sans-serif;
-	font-size: 0.9rem;
+	font-size: 0.8em;
+	line-height: 1.4;
 	float: right;
 	clear: right;
-	margin-right: -60%;
-	width: 50%;
+	width: var(--sidenote-width);
+	margin-right: calc(-1 * (var(--sidenote-width) + var(--sidenote-gap)));
 	margin-top: 0.3rem;
-	margin-bottom: 0;
-	line-height: 1.3;
-	vertical-align: baseline;
 	position: relative;
 }
 
@@ -151,32 +254,26 @@ main.blog-post {
 
 .sidenote-number:after,
 .sidenote:before {
-	font-family: "Apercu", sans-serif;
 	position: relative;
-	vertical-align: baseline;
+	font-size: 0.75em;
+	top: -0.5em;
 }
 
 .sidenote-number:after {
 	content: counter(sidenote-counter);
-	font-size: 0.8rem;
-	top: -0.5rem;
-	left: 0.1rem;
+	left: 0.1em;
 }
 
 .sidenote:before {
 	content: counter(sidenote-counter) " ";
-	font-size: 0.8rem;
-	top: -0.5rem;
 }
 
-blockquote .sidenote,
-blockquote .marginnote {
-	margin-right: -82%;
-	min-width: 59%;
-	text-align: left;
+/* Image modal (image-modal.js) */
+.clickable-img {
+	cursor: pointer;
+	border-radius: 4px;
 }
 
-/* Modal styles */
 .modal-overlay {
 	position: fixed;
 	top: 0;
@@ -191,7 +288,6 @@ blockquote .marginnote {
 }
 
 .modal-content {
-	position: relative;
 	max-width: 90%;
 	max-height: 90%;
 	overflow: hidden;
@@ -202,174 +298,44 @@ blockquote .marginnote {
 	display: block;
 	width: 100%;
 	height: auto;
-	border-radius: 8px;
 }
 
-.clickable-img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	border-radius: 4px;
-	transition: transform 0.2s ease;
-}
-
-mjx-container {
-	width: 55% !important;
-}
-
-/* Mobile responsive */
 @media (max-width: 760px) {
 	body {
-		width: 100%;
-		margin: 0;
-		padding: 0 5%;
-		box-sizing: border-box;
-	}
-
-	.header {
-		padding: 15px 0;
-		width: 100%;
+		padding: 80px 5% 50px 5%;
 	}
 
 	.header.minimized {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 50px;
-		padding: 10px 15px;
-		background-color: white;
+		padding: 15px 5%;
+		background-color: rgba(255, 255, 255, 0.95);
 		border-bottom: 1px solid #eee;
-		z-index: 100;
-		box-sizing: border-box;
+	}
+
+	.blog-post {
+		width: 100%;
 		margin: 0;
 	}
 
-	.header-title {
-		font-size: 1.2em;
-	}
-
-	.header.minimized .header-title a {
-		font-size: 1.2em;
-	}
-
-	main.blog-post {
-		padding: 20px 0;
-		margin-top: 60px;
-		width: 100%;
-		box-sizing: border-box;
-	}
-
 	.blog-post h1 {
-		font-size: 2.2em;
-		margin-bottom: 15px;
-		width: 100%;
-		box-sizing: border-box;
+		font-size: 2em;
 	}
 
-	.blog-post h2 {
-		font-size: 1.4em;
-		margin-top: 25px;
-		width: 100%;
-	}
-
-	.blog-post .content h2 {
-		font-size: 1.4em;
-		margin: 25px 0 12px 0;
-		width: 100%;
-	}
-
-	.blog-post .date,
-	.blog-post .author,
-	.blog-post .content p,
-	.conversation {
-		width: 100%;
-		box-sizing: border-box;
+	.blog-post blockquote {
+		margin-left: 0;
 	}
 
 	.blog-post .content p {
-		margin-top: 15px;
-		margin-bottom: 15px;
-		width: 100%;
+		margin: 15px 0;
 	}
 
 	.blog-post pre {
-		width: 100%;
-		margin-left: 0;
-		font-size: 13px !important;
-		padding: 0.8em !important;
-		box-sizing: border-box;
-		overflow-x: auto;
+		font-size: 13px;
+		padding: 0.8em;
 	}
 
-	.blog-post ol,
-	.blog-post ul {
-		width: 100%;
-		padding-left: 20px;
-		box-sizing: border-box;
-	}
-
-	.blog-post li {
-		margin-bottom: 8px;
-		width: 100%;
-	}
-
-	.blog-post img {
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-		margin: 15px 0;
-		box-sizing: border-box;
-	}
-
-	/* Completely hide sidenotes and related elements on mobile */
 	.sidenote,
 	.marginnote,
 	.sidenote-number {
-		display: none !important;
-	}
-
-	.sidenote-number:after {
-		display: none !important;
-	}
-
-	.message {
-		margin-bottom: 12px;
-		width: 100%;
-		box-sizing: border-box;
-	}
-
-	.timestamp {
-		font-size: 0.75em;
-	}
-
-	.modal-content {
-		max-width: 95%;
-		max-height: 85%;
-	}
-
-	/* Ensure conversation messages don't overflow */
-	.conversation {
-		width: 100%;
-		overflow-wrap: break-word;
-		word-wrap: break-word;
-	}
-
-	.conversation .message {
-		width: 100%;
-		overflow-wrap: break-word;
-		word-wrap: break-word;
-	}
-
-	/* Ensure code blocks don't cause horizontal scroll */
-	.blog-post code {
-		word-wrap: break-word;
-		overflow-wrap: break-word;
-	}
-
-	/* Ensure all content containers respect mobile boundaries */
-	.blog-post .content {
-		width: 100%;
-		overflow-x: hidden;
+		display: none;
 	}
 }

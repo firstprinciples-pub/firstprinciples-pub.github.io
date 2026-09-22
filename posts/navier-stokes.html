@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>To Serve Man - First Principles</title>
-        <link rel="stylesheet" href="../post-serif.css">
+        <link rel="stylesheet" href="../post.css">
         <link rel="icon" href="../logo.png" type="image/png">
         <script
             src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -20,6 +20,12 @@
         </script>
     </head>
     <body>
+        <header class="header minimized">
+            <h1 class="header-title">
+                <a href="../index.html">First Principles</a>
+            </h1>
+        </header>
+
         <main class="blog-post">
             <h1>To Serve Man</h1>
             <div class="date">September 9, 2026</div>
@@ -47,14 +53,13 @@
                             target="_blank">@OpenAI</a>, September 8, 2026,
                         1:20 p.m. ET</span> As someone who has followed the story
                     somewhat closely, along with the broader debate around AI
-                    in mathematics, I wanted to write a short blog post that
-                    lays out a timeline of events, and (hopefully) contextualizes
-                    this result with developments in the past year.</p>
+                    in mathematics, I wanted to lay out a timeline of events and (hopefully) put
+                    this result in the context of the past year.</p>
 
                 <h2>Trust me bro</h2>
 
-                <p>Towards the beginning of 2026, AI in mathematics was
-                    still treated as somewhat of a novelty. There were some
+                <p>At the beginning of 2026, AI in mathematics was
+                    still treated as something of a novelty. There were some
                     interesting results, mostly on Erdős problems, mostly
                     with commercially available AI models, and mostly from a
                     few people<span class="sidenote-number"></span><span
@@ -84,7 +89,7 @@
                             target="_blank">@tao</a>, January 7,
                         2026.</span></p>
 
-                <p>The results being produced began to look like less of a
+                <p>The results began to look like less of a
                     novelty in May, when OpenAI announced that an internal
                     model had disproved the Erdős unit distance conjecture,<span
                         class="sidenote-number"></span><span
@@ -92,10 +97,10 @@
                             href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/"
                             target="_blank">An OpenAI model has disproved a
                             central conjecture in discrete geometry</a>, May 20,
-                        2026.</span> an open problem in discrete geometry. This
-                    result was supplemented by a companion paper, written by
-                    nine mathematicians, that digested the argument and
-                    simplified it.<span class="sidenote-number"></span><span
+                        2026.</span> an open problem in discrete geometry. The
+                    result came with a companion paper by
+                    nine mathematicians that digested and
+                    simplified the argument.<span class="sidenote-number"></span><span
                         class="sidenote">Alon et al., <a
                             href="https://arxiv.org/abs/2605.20695"
                             target="_blank">Remarks on the disproof of the unit
@@ -105,10 +110,10 @@
                     mathematicians worked together to make it legible and
                     useful to the field. The proof was
                     treated not as the end of the process, but as the beginning
-                    of one. This sort of human-centered focus, however, did not
+                    of one. This human-centered focus, however, did not
                     last very long.</p>
 
-                <p>By the summer, the character of results being posted
+                <p>By the summer, the character of the results
                     had changed quite a bit. On July 19, Levent Alpöge (a mathematician and
                     member of technical staff at Anthropic) posted a
                     counterexample to the Jacobian conjecture:<span
@@ -128,18 +133,17 @@
                     0, 0)</blockquote>
 
                 <p>Notably, this was a black-box proof: although the
-                    counterexample itself was easy to verify as correct, no
+                    counterexample itself was easy to verify, no
                     paper accompanied it, nor was there any explanation of how
                     it had been found. A better understanding emerged only
-                    afterward, when other mathematicians (with assistance from
+                    afterward, through the work of other mathematicians (with assistance from
                     AI models)<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://x.com/davikrehalt/status/2079175065695035442"
                             target="_blank">@davikrehalt</a>, July 20,
-                        2026.</span>
-                    worked to find one. Alpöge subsequently posted a resolution
-                    of the Hadamard matrix conjecture on August 12,<span
+                        2026.</span>. Alpöge subsequently posted a resolution
+                    of the Hadamard matrix conjecture on August 12<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://x.com/__alpoge__/status/2087504790435840207"
@@ -161,16 +165,14 @@
                             theoretical computer science</a>, August 1,
                         2026.</span>
                     among them the first explicit construction of a
-                    non-sofic group. This construction (and the nine other
-                    results) did not come with a companion paper written by
-                    mathematicians with domain expertise, the way the unit
-                    distance result had been. Instead, the only proofs
-                    provided were entirely AI-written. Again,
+                    non-sofic group. Unlike the unit distance result, this construction (and the nine other
+                    results) came without a companion paper by
+                    mathematicians with domain expertise. Instead, the proofs were entirely AI-written. Again,
                     understanding had to come from outside. Francesco
                     Fournier-Facio, a mathematician at Cambridge,
                     independently worked out the criterion underneath the
-                    OpenAI results and used that to produce a broader family
-                    of examples, including torsion-free ones<span
+                    OpenAI results and used it to produce a broader family
+                    of examples, including torsion-free ones.<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://arxiv.org/abs/2608.02025"
@@ -191,9 +193,8 @@
                             mathematical capabilities</a>, August 10,
                         2026.</span>
                     Like several other announcements, this one
-                    came without any companion paper aimed at helping
-                    mathematicians understand the argument beyond simply
-                    assessing its correctness.</p>
+                    came without a companion paper to help
+                    mathematicians understand the argument beyond assessing its correctness.</p>
 
                 <h2>Hype moments and aura</h2>
 
@@ -214,12 +215,11 @@
                             href="https://mathstodon.xyz/@tao/117204930249967695"
                             target="_blank">@tao</a>, September 2, 2026.</span>
                     for hype moments and aura by people with no particular
-                    interest in the field itself. One such critique, written
-                    by Hugo Duminil-Copin,<span
+                    interest in the field itself. I<span
                         class="sidenote-number"></span><span
                         class="sidenote">A recipient of the 2022 Fields
-                        Medal.</span> in a blog post sarcastically titled "Care
-                    for a little more AI?", lamented that:<span
+                        Medal.</span>n a blog post sarcastically titled "Care
+                    for a little more AI?", Hugo Duminil-Copin lamented that:<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://proofsandprompts.com/2026/08/30/care-for-a-little-more-ai/"
@@ -240,12 +240,10 @@
                             target="_blank">How Terry Tao Became an Evangelist
                             for AI in Math</a>, Quanta, June 8, 2026.</span>
                     soon
-                    began making a similar case. In a sequence of posts on
-                    Mathstodon, written over four days from the evening of
-                    September 2 to the afternoon of September 5, he
-                    developed his argument.</p>
+                    began making a similar case. He
+                    developed his argument in a sequence of Mathstodon posts from September 2 to September 5.</p>
 
-                <p>In the first of these posts, Tao described the idea of
+                <p>In the first post, Tao described the idea of
                     contamination,<span class="sidenote-number"></span><span
                         class="sidenote">A term from AI evaluation, where a
                         problem whose solution is already public is no longer
@@ -265,11 +263,11 @@
                     be hard to enforce when such tools are both powerful and
                     widely available.</blockquote>
 
-                <p>In a second post (whose importance will be obvious later)
-                    he gave a concrete example. Using the famous
-                    Navier-Stokes equations, Tao explained what could be
-                    lost if an important problem like this were solved
-                    without any insight into the process that produced the
+                <p>In a second post (whose importance will be obvious later),
+                    he used
+                    Navier-Stokes to explain what could be
+                    lost if an important problem were solved
+                    without insight into the process that produced the
                     answer:<span class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tao/117207849921390904"
@@ -303,7 +301,7 @@
                     insight, to the point where the two questions have
                     become <em>negatively correlated</em>.</blockquote>
 
-                <p>He followed this up with a case study that had unfolded a
+                <p>He followed this with a case study from a
                     few days earlier. On August 31, Julia Stadlmann<span
                         class="sidenote-number"></span><span
                         class="sidenote">J.L. Doob Research Assistant
@@ -313,8 +311,7 @@
                         class="sidenote"><a
                             href="https://arxiv.org/abs/2608.31126"
                             target="_blank">arXiv:2608.31126</a>, August 31,
-                        2026.</span> Tao described how, immediately after
-                    this:<span
+                        2026.</span> Tao described what happened next:<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tao/117208617602946453"
@@ -331,11 +328,9 @@
                     became contaminated [...]</blockquote>
 
                 <h2>It's fun to make predictions</h2>
-                <p>Unbeknownst to Tao, prior to his post on Navier-Stokes,
-                    rumors had already been circulating about an AI lab
-                    solving two Millennium Prize Problems. Motivated by
-                    these rumors, and Tao's post, Andrew Curran tweeted the
-                    following:<span class="sidenote-number"></span><span
+                <p>Unbeknownst to Tao, rumors about an AI lab
+                    solving two Millennium Prize Problems had been circulating before his post on Navier-Stokes. Motivated by
+                    these rumors and Tao's post, Andrew Curran tweeted:<span class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://x.com/AndrewCurran_/status/2096062392442724805"
                             target="_blank">@AndrewCurran_</a>, September 4,
@@ -368,8 +363,7 @@
                 <p>At 11:58 p.m. ET on Monday, September 7, Tristan Buckmaster<span
                         class="sidenote-number"></span><span
                         class="sidenote">Professor of mathematics at NYU's
-                        Courant Institute.</span> posted three results, in a
-                    joint collaboration with Levent Alpöge: finite-time
+                        Courant Institute.</span> posted three results from a collaboration with Levent Alpöge: finite-time
                     blowup with smooth forcing for incompressible porous
                     media, for Boussinesq, and for 3D incompressible Euler,
                     with Lean formalizations for each.<span
@@ -378,14 +372,14 @@
                             href="https://mathstodon.xyz/@tristanbuckmaster@mastodon.social/117233413735526010"
                             target="_blank">@tristanbuckmaster</a>, September 7,
                         2026, 11:58 p.m. ET.</span> Alongside them, he posted a
-                    four-page statement,<span
+                    four-page statement<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://cims.nyu.edu/~tristanb/statement.pdf"
-                            target="_blank">statement.pdf</a>.</span> explaining
-                    the following.</p>
+                            target="_blank">statement.pdf</a>.</span> describing
+                    the events leading up to the announcement.</p>
 
-                <p>On September 3, with the rumors circulating, Buckmaster
+                <p>According to his account, on September 3, with the rumors circulating, Buckmaster
                     emailed a mathematician at OpenAI to correct the record.
                     Over the following days, he was asked with increasing
                     urgency to meet. On a call on Sunday, September 6, he was
@@ -414,7 +408,7 @@
                             target="_blank">On the Navier-Stokes Millennium
                             Prize Problem</a>.</span></blockquote>
 
-                <p>He was then offered two proposals:</p>
+                <p>He described two proposals:</p>
 
                 <blockquote>Two proposals were offered to me. The first was
                     that we post our Euler result, and that OpenAI post its
@@ -427,8 +421,8 @@
                     that, and it was so annoying that, Levent works at
                     Anthropic. [...] I declined both offers.</blockquote>
 
-                <p>OpenAI's announcement came thirteen hours later. Using
-                    ten thousand agents on an internal model, running for 88
+                <p>OpenAI's announcement came thirteen hours later. Running
+                    ten thousand agents on an internal model for 88
                     hours, they had produced a proof and a Lean formalization
                     that a fluid can develop a singularity in finite time.
                     In other words, a "solution" to Navier-Stokes.<span
@@ -437,7 +431,7 @@
                             href="https://x.com/OpenAI/status/2097374646148481532"
                             target="_blank">@OpenAI</a>, September 8,
                         2026.</span>
-                    Shortly after, Sébastien Bubeck posted their account of
+                    Shortly after, Sébastien Bubeck described
                     how the effort had started:<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
@@ -462,10 +456,9 @@
 
                 <p>The difference from May is shocking. The unit distance
                     result had been posted alongside a companion piece written
-                    by nine outside domain experts, invited to review the proof
-                    and develop a more comprehensive understanding of it. The
-                    Navier-Stokes result, on the other hand, was the result of
-                    direct competition against two people already working on the
+                    by nine outside domain experts, invited to review and explain the proof. The
+                    Navier-Stokes result, on the other hand, emerged from
+                    direct competition with two people already working on the
                     problem. OpenAI focused on producing and verifying the
                     result as quickly as possible, in an "unedifying" rush
                     similar to the one Tao observed with the bounded-gaps
@@ -478,16 +471,15 @@
 
                 <!-- <h2>A Series of Unfortunate Events</h2> -->
 
-                <p>Tao's post, ironically enough, turned out to be a somewhat of
+                <p>Tao's post, ironically enough, seems to have become something of a
                     self-fulfilling prophecy. By choosing Navier-Stokes as
                     his example of how an AI-generated solution could
-                    inhibit the development of a field, he inadvertently
-                    fueled existing rumors about the problem being solved, which, in
-                    almost comically short order, contributed to the problem
-                    being solved, more or less in the way he described.</p>
+                    inhibit the development of a field, he appears to have
+                    fueled existing rumors. Those rumors, in
+                    almost comically short order, helped set off a race to solve the problem, more or less in the way he described.</p>
 
-                <p>After the announcement from OpenAI, he made a new post,
-                    reflecting on the state of mathematics:<span
+                <p>After OpenAI's announcement, he
+                    reflected on the state of mathematics:<span
                         class="sidenote-number"></span><span
                         class="sidenote"><a
                             href="https://mathstodon.xyz/@tao/117237320796901560"
@@ -516,7 +508,7 @@
                         target="_blank">Mathematicians Need to Act</a> and <a
                         href="https://noncommutativeanalysis.wordpress.com/2026/08/21/whats-not-new/"
                         target="_blank">What's Not New</a>. For a wider range
-                    of perspectives, listen or read Quanta's <a
+                    of perspectives, listen to or read Quanta's <a
                         href="https://www.quantamagazine.org/live-from-icm-2026-what-is-math-for-in-the-age-of-ai-20260903/"
                         target="_blank">What Is Math For in the Age of
                         AI?</a>, a live recording from the recent ICM that
@@ -528,7 +520,7 @@
                         target="_blank">The 92-Year-Old Mathematician and
                         the Teenage Apprentice</a>, published a few days ago,
                     about Joan Birman and the fifteen-year-old she took on
-                    as a mentee at the age of 92.</p>
+                    as a mentee when she was 92.</p>
 
                 <p><em>The cover painting is <a
                             href="https://www.nga.gov/artworks/166427-buffalo-trail-impending-storm"
